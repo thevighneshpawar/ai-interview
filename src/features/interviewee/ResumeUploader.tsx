@@ -82,26 +82,28 @@ export default function ResumeUploader() {
   };
 
   return (
-    <Card className="max-w-xl mx-auto mt-10 shadow-lg rounded-xl">
-      <div className="text-center mb-4">
-        <LucideUpload className="w-10 h-10 text-indigo-500 mx-auto" />
-        <h2 className="text-xl font-bold mt-2">Upload Your Resume</h2>
-        <p className="text-gray-500">PDF or DOCX only</p>
-      </div>
+    <div className="min-h-[70vh] flex items-center justify-center">
+      <Card className="w-full max-w-xl shadow-lg rounded-xl">
+        <div className="text-center mb-4">
+          <LucideUpload className="w-10 h-10 text-indigo-500 mx-auto" />
+          <h2 className="text-xl font-bold mt-2">Upload Your Resume</h2>
+          <p className="text-gray-500">PDF or DOCX only</p>
+        </div>
 
-      <Dragger
-        multiple={false}
-        showUploadList={false}
-        beforeUpload={(file) => handleFile(file)}
-        disabled={loading}
-        accept=".pdf,.docx"
-      >
-        <p className="ant-upload-drag-icon">
-          <InboxOutlined />
-        </p>
-        <p className="ant-upload-text">Click or drag file to this area</p>
-        <p className="ant-upload-hint">Supports PDF or DOCX format</p>
-      </Dragger>
-    </Card>
+        <Dragger
+          multiple={false}
+          showUploadList={false}
+          beforeUpload={(file) => handleFile(file)}
+          disabled={loading}
+          accept=".pdf,.docx"
+        >
+          <p className="ant-upload-drag-icon">
+            <InboxOutlined />
+          </p>
+          <p className="ant-upload-text">Click or drag file to this area</p>
+          <p className="ant-upload-hint">Supports PDF or DOCX format</p>
+        </Dragger>
+      </Card>
+    </div>
   );
 }
