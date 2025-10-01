@@ -6,7 +6,7 @@ export default function useTimer(
 ) {
   const [timeLeft, setTimeLeft] = useState(initialSeconds);
   const [running, setRunning] = useState(false);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<number | null>(null);
 
   const start = () => {
     if (!running) {

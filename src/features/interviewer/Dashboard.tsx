@@ -1,4 +1,3 @@
-import React from "react";
 import { useSelector } from "react-redux";
 import { Table, Tag } from "antd";
 import { useNavigate } from "react-router-dom";

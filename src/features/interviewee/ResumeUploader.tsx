@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Upload, Card, message } from "antd";
 import { InboxOutlined } from "@ant-design/icons";
 import { Upload as LucideUpload } from "lucide-react";

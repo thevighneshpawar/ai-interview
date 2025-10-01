@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import ResumeUploader from "./features/interviewee/ResumeUploader";
 import Dashboard from "./features/interviewer/Dashboard";

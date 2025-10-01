@@ -99,7 +99,7 @@ export default function InterviewChat() {
 
   const startRecording = () => {
     if (!recognitionRef.current) {
-      message.warn("Voice recording not supported in this browser.");
+      message.warning("Voice recording not supported in this browser.");
       return;
     }
 
@@ -258,6 +258,7 @@ export default function InterviewChat() {
           const qa = candidate.questions.map((q, i) => ({
             question: q.text,
             answer: i === qIndex ? localAnswer || "" : q.answerText || "",
+            score: q.score ?? 0,
           }));
           const summary = await summarizeInterview(qa);
           dispatch(
